@@ -1,13 +1,17 @@
 import React from 'react'
 import Image from 'next/image';
-import p1 from "../public/png/-original-imagetj2awbvdju6.webp";
 function Product(props) {
   return (
     <div className="row bg-white w-[21vw] p-[2vh] rounded-lg text-center text-black ">
             <div className="p1" id="1">
-              <a href="./gg.html">
-                <Image className=' w-[20vw]' src={props.src} alt="" />
-              </a>
+            
+            <a href="./gg.html" className=' '>
+                <div className='h-[15vw] items-center justify-center my-auto flex'>
+                <Image className='  mx-auto' src={props.src} alt="" />
+                </div>
+                
+              
+            </a>
               <h3 id="name" className="text-3xl my-[2vh] font-bold font-serif">
                 {props.name}
               </h3>
