@@ -8,7 +8,6 @@ const page = () => {
   
   return (
     <>
-      <Header/>
       <SliderIMG/>
       <Products/>
     </>
