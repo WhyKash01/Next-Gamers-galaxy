@@ -5,145 +5,54 @@ import searchIcon from "../public/png/magnifiying-glass.png";
 import fav from "../public/png/heart (1).png"
 import cart from "../public/png/shopping-cart (1).png"
 import profile from "../public/png/user.png"
+import Dropsdown from "./Dropsdown";
+import "./Header.css"
 function Header() {
-  
+  const hide="hidden";
+  const OpenDropDown=()=>{
+
+  }
   return (
     <div className=" bg-black px-[5vw] py-[3vh]"  >
       <div className="navTop flex justify-between">
         <Image src={logo} className="w-[25vh] " alt="" />
         <div className="search flex">
-          <input type="text" placeholder="Search..." className="searchBar placeholder:text-xl placeholder:text-black pl-[3vw] pr-[17vw] h-[6vh] my-auto rounded-3xl "/>
-          <Image src={searchIcon} className="searchIcon w-[4vh] h-[4vh] my-auto ml-[-6vh] " alt=""/>
+          <input type="text" placeholder="Search..." className="searchBar placeholder:text-xl placeholder:text-black pl-[2vw] text-xl pr-[17vw] h-[5vh] my-auto rounded-2xl "/>
+          <Image src={searchIcon} className="searchIcon w-[3vh] h-[3vh] my-auto ml-[-6vh] " alt=""/>
         </div>
         <div className="user flex">
-                <div className="fav w-[6vh] p-[1.2vh] mr-[2vw] bg-white my-auto rounded-full " ><Image src={fav} alt=""/></div>
-                <div className="cart w-[6vh] p-[1.2vh] mr-[2vw] bg-white my-auto rounded-full "><Image src={cart} alt=""/></div>
-                <div className="profile w-[6vh] p-[1.2vh]  bg-white my-auto rounded-full "><Image src={profile} alt=""/></div>
+                <div className="fav w-[5.5vh] hover:bg-red-500  hover:cursor-pointer p-[1.2vh] mr-[2vw] bg-white my-auto rounded-full " ><Image src={fav} alt=""/></div>
+                <div className="cart w-[5.5vh] p-[1.2vh] hover:bg-red-500  hover:cursor-pointer mr-[2vw] bg-white my-auto rounded-full "><Image src={cart} alt=""/></div>
+                <div className="profile w-[5.5vh] p-[1.2vh] hover:bg-red-500  hover:cursor-pointer bg-white my-auto rounded-full "><Image src={profile} alt=""/></div>
             </div>
       </div>
-      <div className="navBottom text-white flex mt-[2vh] justify-between mx-[20vw] text-3xl ">
-            <h3 className="menuItem">Laptop <i className="fas fa-caret-down"></i>
-                <div className="dropDown hidden">
-                    <ul>
-                        <li>
-                            <h3>Latest Products</h3>
-                        </li>
-                        <li>
-                            <h4>Asus Tuf</h4>
-                        </li>
-                        <li>
-                            <h4>Dell G15</h4>
-                        </li>
-                        <li>
-                            <h4>Acer Nitro</h4>
-                        </li>
-                        <li>
-                            <h4>Msi sword</h4>
-                        </li>
-                        <li>
-                            <h4>HP Victus</h4>
-                        </li>
-                    </ul>
-                </div>
-            </h3>
-            <h3 className="menuItem">Graphic Card <i className="fas fa-caret-down"></i>
-                <div className="dropDown1 hidden">
-                    <ul>
-                        <li>
-                            <h3>Latest Products</h3>
-                        </li>
-                        <li>
-                            <h4>GTX 1650</h4>
-                        </li>
-                        <li>
-                            <h4>RTX 3050</h4>
-                        </li>
-                        <li>
-                            <h4>RTX 3090</h4>
-                        </li>
-                        <li>
-                            <h4>RTX 4050</h4>
-                        </li>
-                        <li>
-                            <h4>RTX 4090</h4>
-                        </li>
-                    </ul>
-                </div>
-            </h3>
-            <h3 className="menuItem">Keyboard <i className="fas fa-caret-down"></i>
-                <div className="dropDown2 hidden">
-                    <ul>
-                        <li>
-                            <h3>Latest Products</h3>
-                        </li>
-                        <li>
-                            <h4>Asus Tuf</h4>
-                        </li>
-                        <li>
-                            <h4>Dell G15</h4>
-                        </li>
-                        <li>
-                            <h4>Acer Nitro</h4>
-                        </li>
-                        <li>
-                            <h4>Msi sword</h4>
-                        </li>
-                        <li>
-                            <h4>HP Victus</h4>
-                        </li>
-                    </ul>
-                </div>
-            </h3>
-            <h3 className="menuItem">Monitor <i className="fas fa-caret-down"></i>
-                <div className="dropDown3 hidden">
-                    <ul>
-                        <li>
-                            <h3>Latest Products</h3>
-                        </li>
-                        <li>
-                            <h4>Asus Tuf</h4>
-                        </li>
-                        <li>
-                            <h4>Dell G15</h4>
-                        </li>
-                        <li>
-                            <h4>Acer Nitro</h4>
-                        </li>
-                        <li>
-                            <h4>Msi sword</h4>
-                        </li>
-                        <li>
-                            <h4>HP Victus</h4>
-                        </li>
-                    </ul>
-                </div>
-            </h3>
-            <h3 className="menuItem">Processor <i className="fas fa-caret-down"></i>
-                <div className="dropDown4 hidden">
-                    <ul>
-                        <li>
-                            <h3>Latest Products</h3>
-                        </li>
-                        <li>
-                            <h4>Asus Tuf</h4>
-                        </li>
-                        <li>
-                            <h4>Dell G15</h4>
-                        </li>
-                        <li>
-                            <h4>Acer Nitro</h4>
-                        </li>
-                        <li>
-                            <h4>Msi sword</h4>
-                        </li>
-                        <li>
-                            <h4>HP Victus</h4>
-                        </li>
-                    </ul>
-                </div>
-            </h3>
+      <div className="text-white font-mono font-semibold flex gap-[4vw] my-[2vh] text-3xl  justify-center"> 
+        <h2>Laptops </h2>
+        <h2>Monitors</h2>
+        <h2>Graphic Cards</h2>
+        <h2>Processores</h2>
+        <h2>Keyboards</h2>
+        
+      </div>
+      <div className="d1 absolute left-[15vw]  ">
+        <Dropsdown category="Laptop" className=" absolute right-[10vw]" />
+      </div>
+      <div className="absolute left-[25vw] hidden">
+        <Dropsdown category="Laptop" className=" absolute right-[10vw]" />
+      </div>
+      <div className="absolute left-[38vw] hidden">
+        <Dropsdown category="Laptop" className=" absolute right-[10vw]" />
+      </div>
+      <div className="absolute right-[29vw] hidden">
+        <Dropsdown category="Laptop" className=" absolute right-[10vw]" />
+      </div>
+      <div className="absolute right-[17vw] hidden">
+        <Dropsdown category="Laptop" className=" absolute right-[10vw]" />
+      </div>
+        
 
-        </div>
+      
+      
     </div>
   );
 }

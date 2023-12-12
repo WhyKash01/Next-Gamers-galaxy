@@ -195,16 +195,17 @@ function Products() {
       percent: "17% off"
     }
   ]
+  
   return (
-    <div className="bg-black text-white">
-      <h2 className="bef text-center text-5xl font-serif text-red-600 py-[5vh] ">
+    <div className="bg-[#1f1f1f] text-white">
+      <h2 className=" text-center  my-[6vh] font-bold font-mono text-5xl ">
         Recommended Items
       </h2>
       <div className=" pb-[5vh]">
         <div className=" flex justify-between mb-[5vh] mx-[5vw]">
           <Product {...object[0]} />
           <Product {...object[1]} />
-          <Product {...object[2]}/>
+          <Product {...object[2]} />
           <Product {...object[3]} />
         </div>
         <div className=" flex justify-between mb-[5vh] mx-[5vw]">
@@ -233,6 +234,18 @@ function Products() {
         </div>
         <div className=" flex justify-between mb-[5vh] mx-[5vw]">
           <Product {...object[20]} />
+          <Product {...object[21]} />
+          <Product {...object[22]} />
+          <Product {...object[23]} />
+        </div>
+        <div className=" flex justify-between mb-[5vh] mx-[5vw]">
+          <Product {...object[20]} />
+          <Product {...object[21]} />
+          <Product {...object[22]} />
+          <Product {...object[23]} />
+        </div>
+        <div className=" flex justify-between mb-[5vh] mx-[5vw]">
+          <Product {...object[20]}  />
           <Product {...object[21]} />
           <Product {...object[22]} />
           <Product {...object[23]} />

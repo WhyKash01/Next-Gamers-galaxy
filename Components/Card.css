@@ -1,0 +1,23 @@
+.swiper-button-next,
+.swiper-button-prev{
+    color: red;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after{
+    font-size: 40px;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled{
+    opacity: 0;
+}
+
+.swiper-scrollbar{
+    background: rgba(255, 255, 255, 0.153);
+}
+
+.swiper-scrollbar-drag{
+    background: rgba(255, 255, 255, 0.579);
+    
+}

@@ -2,13 +2,15 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 function Product(props) {
+  const objects = props;
   return (
-    <div className="row bg-white w-[21vw] p-[2vh] rounded-lg text-center text-black ">
+    <div className="row shadow-inner shadow-zinc-700 bg-white w-[21vw] p-[2vh] rounded-lg text-center text-black ">
             <div className="p1" id="1">
             
-            <Link href="ProductPage"  className=' '>
+            <Link href="ProductPage" className=' '>
                 <div className='h-[15vw] items-center justify-center my-auto flex'>
-                <Image className='  mx-auto' src={props.src} alt="" />
+                <Image  className='  mx-auto' src={props.src} alt="" />
+                
                 </div>
             </Link>
               <h3 id="name" className="text-3xl line-clamp-1 my-[2vh] font-bold font-serif">
