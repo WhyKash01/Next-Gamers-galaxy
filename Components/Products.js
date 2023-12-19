@@ -198,7 +198,7 @@ function Products() {
   
   return (
     <div className="bg-[#1f1f1f] text-white">
-      <h2 className=" text-center  my-[6vh] font-bold font-mono text-5xl ">
+      <h2 className=" text-center  py-[5vh] font-bold font-mono text-5xl ">
         Recommended Items
       </h2>
       <div className=" pb-[5vh]">
@@ -234,18 +234,6 @@ function Products() {
         </div>
         <div className=" flex justify-between mb-[5vh] mx-[5vw]">
           <Product {...object[20]} />
-          <Product {...object[21]} />
-          <Product {...object[22]} />
-          <Product {...object[23]} />
-        </div>
-        <div className=" flex justify-between mb-[5vh] mx-[5vw]">
-          <Product {...object[20]} />
-          <Product {...object[21]} />
-          <Product {...object[22]} />
-          <Product {...object[23]} />
-        </div>
-        <div className=" flex justify-between mb-[5vh] mx-[5vw]">
-          <Product {...object[20]}  />
           <Product {...object[21]} />
           <Product {...object[22]} />
           <Product {...object[23]} />

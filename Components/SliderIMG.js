@@ -26,10 +26,10 @@ const SliderIMG = () => {
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      <SwiperSlide><Image className="w-[100vw] h-auto" src={img4} alt="" /></SwiperSlide>
       <SwiperSlide><Image className="w-screen h-auto" src={img1} alt="" /></SwiperSlide>
       <SwiperSlide><Image className="w-[100vw] h-auto" src={img2} alt="" /></SwiperSlide>
       <SwiperSlide><Image className="w-[100vw] h-auto" src={img3} alt="" /></SwiperSlide>
+      <SwiperSlide><Image className="w-[100vw] h-auto" src={img4} alt="" /></SwiperSlide>
       
     </Swiper>
   )

@@ -7,15 +7,18 @@ import cart from "../public/png/shopping-cart (1).png"
 import profile from "../public/png/user.png"
 import Dropsdown from "./Dropsdown";
 import "./Header.css"
+import Link from "next/link";
 function Header() {
   const hide="hidden";
-  const OpenDropDown=()=>{
-
+  const displayDD = ()=>{
   }
   return (
     <div className=" bg-black px-[5vw] py-[3vh]"  >
       <div className="navTop flex justify-between">
+        <Link href={'/'}>
         <Image src={logo} className="w-[25vh] " alt="" />
+        </Link>
+        
         <div className="search flex">
           <input type="text" placeholder="Search..." className="searchBar placeholder:text-xl placeholder:text-black pl-[2vw] text-xl pr-[17vw] h-[5vh] my-auto rounded-2xl "/>
           <Image src={searchIcon} className="searchIcon w-[3vh] h-[3vh] my-auto ml-[-6vh] " alt=""/>
@@ -26,8 +29,8 @@ function Header() {
                 <div className="profile w-[5.5vh] p-[1.2vh] hover:bg-red-500  hover:cursor-pointer bg-white my-auto rounded-full "><Image src={profile} alt=""/></div>
             </div>
       </div>
-      <div className="text-white font-mono font-semibold flex gap-[4vw] my-[2vh] text-3xl  justify-center"> 
-        <h2>Laptops </h2>
+      <div className="text-white font-bold flex gap-[4vw] my-[2vh] text-3xl  justify-center"> 
+        <h2 onMouseEnter={displayDD()}>Laptops </h2>
         <h2>Monitors</h2>
         <h2>Graphic Cards</h2>
         <h2>Processores</h2>

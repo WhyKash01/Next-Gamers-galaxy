@@ -24,8 +24,9 @@ import g2 from "../../public/png/graphic2.jpg";
 import g3 from "../../public/png/graphic3.webp";
 import g4 from "../../public/png/graphic6.jpg";
 import g5 from "../../public/png/graphic7.webp";
-import LeftSection from './CompoentsProduct/LeftSection'
-import RightSection from './CompoentsProduct/RightSection'
+import LeftSection from './CompoentsProduct/LeftSection';
+import Products from '@/Components/Products';
+import RightSection from './CompoentsProduct/RightSection';
 const page = (props) => {
   let object= [
     {
@@ -198,9 +199,14 @@ const page = (props) => {
     }
   ]
   return (
-    <div className=' mx-[5vw] bg-[#1f1f1f] mt-[5vh] flex gap-[10vw]'>
+    <div>
+
+    <div className=' mx-[5vw]  bg-[#171717] mt-[5vh] flex gap-[5vw]'>
         <LeftSection {...object[0]}/>
         <RightSection {...object[0]}/>
+        
+    </div>
+    <Products/>
     </div>
   )
 }
