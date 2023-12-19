@@ -10,6 +10,7 @@ import "./Header.css"
 import Link from "next/link";
 function Header() {
   const hide="hidden";
+
   const displayDD = ()=>{
   }
   return (
@@ -23,10 +24,16 @@ function Header() {
           <input type="text" placeholder="Search..." className="searchBar placeholder:text-xl placeholder:text-black pl-[2vw] text-xl pr-[17vw] h-[5vh] my-auto rounded-2xl "/>
           <Image src={searchIcon} className="searchIcon w-[3vh] h-[3vh] my-auto ml-[-6vh] " alt=""/>
         </div>
-        <div className="user flex">
-                <div className="fav w-[5.5vh] hover:bg-red-500  hover:cursor-pointer p-[1.2vh] mr-[2vw] bg-white my-auto rounded-full " ><Image src={fav} alt=""/></div>
-                <div className="cart w-[5.5vh] p-[1.2vh] hover:bg-red-500  hover:cursor-pointer mr-[2vw] bg-white my-auto rounded-full "><Image src={cart} alt=""/></div>
-                <div className="profile w-[5.5vh] p-[1.2vh] hover:bg-red-500  hover:cursor-pointer bg-white my-auto rounded-full "><Image src={profile} alt=""/></div>
+        <div className="user flex my-auto">
+                <Link href={'/'}>
+                <div className="fav w-[5.5vh] hover:bg-red-500  hover:cursor-pointer p-[1.2vh] mr-[2vw] bg-white  rounded-full " ><Image src={fav} alt=""/></div>
+                </Link>
+                <Link href="AddToCart">
+                  <div className="cart w-[5.5vh] p-[1.2vh] hover:bg-red-500  hover:cursor-pointer mr-[2vw] bg-white  rounded-full "><Image src={cart} alt=""/></div>
+                </Link>
+                <Link href={'/'}>
+                  <div className="profile w-[5.5vh] p-[1.2vh] hover:bg-red-500  hover:cursor-pointer bg-white  rounded-full "><Image src={profile} alt=""/></div>
+                </Link>            
             </div>
       </div>
       <div className="text-white font-bold flex gap-[4vw] my-[2vh] text-3xl  justify-center"> 

@@ -13,7 +13,7 @@ function Product(props) {
                 
                 </div>
             </Link>
-              <h3 id="name" className="text-3xl line-clamp-1 my-[2vh] font-bold font-serif">
+              <h3 id="name" className="text-3xl line-clamp-1 my-[2vh] font-bold">
                 {props.name}
               </h3>
               <div className="price flex justify-between font-serif text-2xl mx-[10%] ">

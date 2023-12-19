@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 const LeftSection = (props) => {
   return (
     <div className='w-[30vw]'>
@@ -24,12 +25,12 @@ const LeftSection = (props) => {
 
       </div>
       <div className='flex justify-between gap-10 text-2xl font-bold'>
-          <button className='bg-red-600 hover:bg-black hover:text-white hover:border py-[1.5vh] rounded-md w-[50%] '>
+          <Link href="AddToCart" className=' bg-red-600 text-center hover:bg-black hover:text-white hover:border py-[1.5vh] rounded-md w-[50%]'>
             Add to Cart
-          </button>
-          <button className='bg-white hover:bg-black hover:text-white hover:border rounded-md w-[50%]'>
+          </Link>
+          <Link href="BuyNow" className='bg-white hover:bg-black text-center hover:text-white hover:border py-[1.5vh] rounded-md w-[50%]'>
             Buy Now
-          </button>
+          </Link>
         </div>
       </div>
       
