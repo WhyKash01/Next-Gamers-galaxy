@@ -41,9 +41,9 @@ const CartItem = () => {
                 </div>
                 <Review/>
                 <div className='flex mt-5 gap-5'>
-                    <h3 onClick={SubQuantity} className='text-black hover:cursor-pointer py-[0.2%] hover:bg-black hover:text-white hover:border bg-white w-10 h-10 rounded-full text-center text-2xl '>-</h3>
+                    <h3 onClick={SubQuantity} className= ' block select-none text-black hover:cursor-pointer py-[0.2%] hover:bg-black hover:text-white hover:border bg-white w-10 h-10 rounded-full text-center text-2xl '>-</h3>
                     <h3 className='text-black rounded-md bg-white w-32 h-10 text-2xl text-center  py-1'>{Quantity}</h3>
-                    <h3 onClick={AddQuantity} className='text-black hover:cursor-pointer py-[0.2%] hover:bg-black hover:text-white hover:border  bg-white w-10 h-10 rounded-full text-center text-2xl '>+</h3>
+                    <h3 onClick={AddQuantity} className='text-black select-none hover:cursor-pointer py-[0.2%] hover:bg-black hover:text-white hover:border  bg-white w-10 h-10 rounded-full text-center text-2xl '>+</h3>
                     <h3 className=' text-2xl ml-10 hover:text-red-600 hover:cursor-pointer font-semibold'>Remove</h3>               
                 </div>
             </div>

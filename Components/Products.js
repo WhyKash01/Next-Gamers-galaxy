@@ -1,5 +1,6 @@
 import React from "react";
 import Product from "./Product";
+import Pagination from "./Pagination";
 import l1 from "../public/png/laptop1.webp";
 import l2 from "../public/png/laptop2.webp";
 import l3 from "../public/png/laptop3.webp";
@@ -201,44 +202,33 @@ function Products() {
       <h2 className=" text-center  py-[5vh] font-bold font-mono text-5xl ">
         Recommended Items
       </h2>
-      <div className=" pb-[5vh]">
-        <div className=" flex justify-between mb-[5vh] mx-[5vw]">
-          <Product {...object[0]} />
-          <Product {...object[1]} />
-          <Product {...object[2]} />
-          <Product {...object[3]} />
-        </div>
-        <div className=" flex justify-between mb-[5vh] mx-[5vw]">
-          <Product {...object[4]} />
-          <Product {...object[5]} />
-          <Product {...object[6]} />
-          <Product {...object[7]} />
-        </div>
-        <div className=" flex justify-between mb-[5vh] mx-[5vw]">
-          <Product {...object[8]} />
-          <Product {...object[9]} />
-          <Product {...object[10]} />
-          <Product {...object[11]} />
-        </div>
-        <div className=" flex justify-between mb-[5vh] mx-[5vw]">
-          <Product {...object[12]} />
-          <Product {...object[13]} />
-          <Product {...object[14]} />
-          <Product {...object[15]} />
-        </div>
-        <div className=" flex justify-between mb-[5vh] mx-[5vw]">
-          <Product {...object[16]} />
-          <Product {...object[17]} />
-          <Product {...object[18]} />
-          <Product {...object[19]} />
-        </div>
-        <div className=" flex justify-between mb-[5vh] mx-[5vw]">
-          <Product {...object[20]} />
-          <Product {...object[21]} />
-          <Product {...object[22]} />
-          <Product {...object[23]} />
-        </div>
+      <div className=" grid md:grid-cols-3 grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 mx-[5vw] mb-10">
+      <Product {...object[0]} />
+      <Product {...object[1]} />
+      <Product {...object[2]} />
+      <Product {...object[3]} />
+      <Product {...object[4]} />
+      <Product {...object[5]} />
+      <Product {...object[6]} />
+      <Product {...object[7]} />
+      <Product {...object[8]} />
+      <Product {...object[9]} />
+      <Product {...object[10]} />
+      <Product {...object[11]} />
+      <Product {...object[12]} />
+      <Product {...object[13]} />
+      <Product {...object[14]} />
+      <Product {...object[15]} />
+      <Product {...object[16]} />
+      <Product {...object[17]} />
+      <Product {...object[18]} />
+      <Product {...object[19]} />
+      <Product {...object[20]} />
+      <Product {...object[21]} />
+      <Product {...object[22]} />
+      <Product {...object[23]} />
       </div>
+      <Pagination></Pagination>
       
     </div>
   );
