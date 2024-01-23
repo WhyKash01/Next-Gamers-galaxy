@@ -11,7 +11,7 @@ import 'swiper/css/autoplay';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import './slider.css';
+// import './slider.css';
 
 const SliderIMG = () => {
   return (

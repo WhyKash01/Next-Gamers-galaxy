@@ -13,6 +13,9 @@ import 'swiper/css/navigation';
 import './Card.css';
 
 const CategoryCard = () => {
+  let im= 'h-[15vw] items-center justify-center my-auto flex'
+  let text= "mt-10 text-center text-2xl font-semibold"
+  let card = "border bg-white p-5 overflow-hidden rounded-lg justify-center items-center my-auto";
   return (
     <Swiper
     modules={[Navigation, Scrollbar, A11y]}
@@ -25,56 +28,56 @@ const CategoryCard = () => {
     >
       <SwiperSlide>
         <Link href="/">
-        <div className='border bg-white p-5 rounded-lg '>
-                <div className='h-[15vw] items-center justify-center my-auto flex'>
-                <Image  className='  mx-auto' src={l1} alt="" />
+        <div className={card}>
+                <div className={im}>
+                <Image  className='max-h-[15vw] w-auto mx-auto ' src={l1} alt="" />
                 
                 </div>
-            <h3 className=' mt-10 text-center text-4xl font-mono font-semibold'>Laptops</h3>
+            <h3 className={text}>Laptops</h3>
         </div>
         </Link>
       </SwiperSlide>
       <SwiperSlide>
       <Link href="/">
-        <div className='border bg-white p-5 rounded-lg justify-center items-center my-auto '>
-                <div className='h-[15vw] items-center justify-center my-auto flex'>
-                <Image  className='  mx-auto' src={k4} alt="" />
+        <div className={card}>
+                <div className={im}>
+                <Image  className='max-h-[15vw] w-auto  mx-auto' src={k4} alt="" />
                 
                 </div>
-            <h3 className=' mt-10 text-center text-4xl font-mono font-semibold'>Keyboards</h3>
+            <h3 className={text}>Keyboards</h3>
         </div>
         </Link>
       </SwiperSlide>
       <SwiperSlide>
       <Link href="/">
-        <div className='border bg-white p-5 rounded-lg justify-center items-center my-auto '>
-                <div className='h-[15vw] items-center justify-center my-auto flex'>
-                <Image  className='  mx-auto' src={m2} alt="" />
+        <div className={card}>
+                <div className={im}>
+                <Image  className='max-h-[15vw] w-auto  mx-auto' src={m2} alt="" />
                 
                 </div>
-            <h3 className=' mt-10 text-center text-4xl font-mono font-semibold'>Monitors</h3>
+            <h3 className={text}>Monitors</h3>
         </div>
         </Link>
       </SwiperSlide>
       <SwiperSlide>
       <Link href="/">
-        <div className='border bg-white p-5 rounded-lg justify-center items-center my-auto '>
-                <div className='h-[15vw] items-center justify-center my-auto flex'>
-                <Image  className='  mx-auto' src={g1} alt="" />
+        <div className={card}>
+                <div className={im}>
+                <Image  className='max-h-[15vw] w-auto mx-auto' src={g1} alt="" />
                 
                 </div>
-            <h3 className=' mt-10 text-center text-4xl font-mono font-semibold'>Graphic Card</h3>
+            <h3 className={text}>Graphic Card</h3>
         </div>
         </Link>
       </SwiperSlide>
       <SwiperSlide>
       <Link href="/">
-        <div className='border bg-white p-5 rounded-lg justify-center items-center my-auto '>
-                <div className='h-[15vw] items-center justify-center my-auto flex'>
-                <Image  className='  mx-auto' src={p1} alt="" />
+        <div className={card}>
+                <div className={im}>
+                <Image  className='max-h-[15vw] w-auto  mx-auto' src={p1} alt="" />
                 
                 </div>
-            <h3 className=' mt-10 text-center text-4xl font-mono font-semibold'>Processor</h3>
+            <h3 className={text}>Processor</h3>
         </div>
         </Link>
       </SwiperSlide>

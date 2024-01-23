@@ -1,55 +1,85 @@
-'use client'
-import '../../ProductPage/CompoentsProduct/ProPage.css'
-import React, {useState} from 'react'
-import Image from 'next/image'
-import i1 from "../../../public/png/laptop1.webp"
-import Review from '@/app/ProductPage/CompoentsProduct/Review'
-const CartItem = () => {
-    const [Quantity, setQuantity] = useState(1)
-    let AddQuantity =()=>{
-        setQuantity(Quantity+1)
-    }
-    let SubQuantity =()=>{
-        if(Quantity==1){
-            
-        }
-        else{
-            setQuantity(Quantity-1)
-        }
-    }
-    let removeItem = ()=>{
+"use client";
+import "../../ProductPage/CompoentsProduct/ProPage.css";
+import React, { useState } from "react";
+import Image from "next/image";
+import i1 from "../../../public/png/laptop1.webp";
+import Review from "@/app/ProductPage/CompoentsProduct/Review";
+import { itemAdded, data, price, OriginalPrice } from "@/Store/atom";
+import {  useRecoilState } from "recoil";
+const CartItem = (props) => {
+  const [Quantity, setQuantity] = useState(1);
+  const [OrderPrice, setOrderPrice]= useRecoilState(price);
+  const [item, setitem] = useRecoilState(itemAdded);
+  const [originalPrice, setOriginalPrice]= useRecoilState(OriginalPrice);
+  const [object, setobject] = useRecoilState(data);
+  // let AddQuantity = () => {
+  //   setQuantity(Quantity + 1);
+  // };
+  // let SubQuantity = () => {
+  //   if (Quantity == 1) {
+  //   } else {
+  //     setQuantity(Quantity - 1);
+  //   }
+  // };
+  const deleteHandler=()=> {
+    const items=item.filter(item =>item.id !==parseInt(props.id))
+    setTimeout(() => {
+      setitem(items)
+    }, 200);
+  }
+  let sumPrice=0;
+  item.map((data,index)=>{ 
+    sumPrice = sumPrice + object[data.id-1].Price 
+    setOrderPrice(sumPrice )
+  })
+  let OriginalsumPrice=0;
+  item.map((data,index)=>{ 
+    OriginalsumPrice = OriginalsumPrice + object[data.id-1].OrPrice 
+    setOriginalPrice(OriginalsumPrice )
+  })
 
-    }
-    let object= {
-          name: "Asus Tuf Gaming F15",
-          src: i1,
-          largeName: "ASUS TUF Gaming F15 Core i5 12th Gen - (16 GB/512 GB SSD/Windows 11Pro/4 GB Graphics/NVIDIA GeForce RTX 3050)",
-          OrPrice:"₹1,03,990",
-          Price: "₹85,990",
-          percent:"17% off"
-        }
   return (
-
-    <div className='flex gap-20 bg-[#3e3e3e] rounded-xl p-5  my-10'>
-            <Image className='w-[25%] p-5 bg-white rounded-lg' src={object.src}></Image>
-            <div className='text-white'>
-                <h1 className='text-2xl font-bold'>{object.largeName}</h1>
-                <div className="price flex gap-10 font-serif text-2xl my-5">
-                    <s className=" text-red-600">{object.OrPrice}</s>
-                    <h2 className=" text-green-800">{object.Price}</h2>
-                    <h4>{object.percent}</h4>
-                </div>
-                <Review/>
-                <div className='flex mt-5 gap-5'>
-                    <h3 onClick={SubQuantity} className= ' block select-none text-black hover:cursor-pointer py-[0.2%] hover:bg-black hover:text-white hover:border bg-white w-10 h-10 rounded-full text-center text-2xl '>-</h3>
-                    <h3 className='text-black rounded-md bg-white w-32 h-10 text-2xl text-center  py-1'>{Quantity}</h3>
-                    <h3 onClick={AddQuantity} className='text-black select-none hover:cursor-pointer py-[0.2%] hover:bg-black hover:text-white hover:border  bg-white w-10 h-10 rounded-full text-center text-2xl '>+</h3>
-                    <h3 className=' text-2xl ml-10 hover:text-red-600 hover:cursor-pointer font-semibold'>Remove</h3>               
-                </div>
+    <div className="flex gap-10 bg-[#3e3e3e] rounded-xl p-5  my-10">
+      <div className="flex items-center p-5 bg-white rounded-lg ">
+      <Image
+        className=" max-w-[16rem] max-h-[13rem] mx-auto"
+        src={object[props.id-1].src}
+      ></Image>
+      </div>
+      <div className="flex items-center">
+      <div className="text-white ">
+        <h1 className="line-clamp-3  text-lg font-bold">{object[props.id-1].LongName}</h1>
+        <div className="price flex gap-10 font-serif text-lg my-2">
+          <s className=" text-red-600">₹{object[props.id-1].OrPrice}</s>
+          <h2 className=" text-green-600">₹{object[props.id-1].Price}</h2>
+          <h4>{object[props.id-1].percent}</h4>
+        </div>
+        <Review />
+        <div className="flex  justify-between mr-10">
+          <div className="flex  mt-5 gap-2">
+            <div
+              // onClick={SubQuantity}
+              className=" flex justify-center select-none text-black hover:cursor-pointer hover:bg-black hover:text-white hover:border h-8 w-8 bg-white rounded-full text-lg "
+            >
+              <h1 className="my-auto relative -top-[5%]">-</h1>
             </div>
-            
+            <div className="text-black rounded-md bg-white flex justify-center w-24 h-8 text-lg text-center">
+              <h1 className="my-auto">{Quantity}</h1>
+            </div>
+            <h3
+              // onClick={AddQuantity}
+              className="flex justify-center select-none text-black hover:cursor-pointer hover:bg-black hover:text-white hover:border h-8 w-8 bg-white rounded-full text-lg "
+            >
+              +
+            </h3>
+          </div>
+          <button onClick={()=>deleteHandler()} className=" text-lg hover:text-red-600 hover:cursor-pointer font-semibold">
+            Remove 
+          </button>
+        </div>
+      </div>
+      </div>
     </div>
-  )
-}
-
-export default CartItem
+  );
+};
+export default CartItem;

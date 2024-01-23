@@ -4,8 +4,8 @@ import logo from "../public/png/gamers-galaxy-high-resolution-logo-color-on-tran
 import searchIcon from "../public/png/magnifiying-glass.png";
 import fav from "../public/png/heart (1).png"
 import cart from "../public/png/shopping-cart (1).png"
+import Drop from "./Drop"
 import profile from "../public/png/user.png"
-import Dropsdown from "./Dropsdown";
 import "./Header.css"
 import Link from "next/link";
 function Header() {
@@ -21,7 +21,7 @@ function Header() {
         </Link>
         
         <div className="search flex">
-          <input type="text" placeholder="Search..." className="searchBar placeholder:text-xl placeholder:text-black pl-[2vw] text-xl pr-[17vw] h-[5vh] my-auto rounded-2xl "/>
+          <input type="text" placeholder="Search..." className="searchBar placeholder:text-lg placeholder:text-black pl-[2vw] text-lg pr-[17vw] h-[5vh] py-5 my-auto rounded-xl "/>
           <Image src={searchIcon} className="searchIcon w-[3vh] h-[3vh] my-auto ml-[-6vh] " alt=""/>
         </div>
         <div className="user flex my-auto">
@@ -36,29 +36,16 @@ function Header() {
                 </Link>            
             </div>
       </div>
-      <div className="text-white font-bold flex gap-[4vw] my-[2vh] text-3xl  justify-center"> 
-        <h2 onMouseEnter={displayDD()}>Laptops </h2>
-        <h2>Monitors</h2>
-        <h2>Graphic Cards</h2>
-        <h2>Processores</h2>
-        <h2>Keyboards</h2>
-        
+      <div className="text-white font-semibold flex gap-[5vw]  text-xl  justify-center"> 
+        <Drop title={"Laptops"}/>
+        <Drop title={"Monitors"}/>
+        <Drop title={"Graphic Cards"}/>
+        <Drop title={"Processores"}/>
+        <Drop title={"Keyboards"}/>
       </div>
-      <div className="d1 absolute left-[15vw]  ">
-        <Dropsdown category="Laptop" className=" absolute right-[10vw]" />
-      </div>
-      <div className="absolute left-[25vw] hidden">
-        <Dropsdown category="Laptop" className=" absolute right-[10vw]" />
-      </div>
-      <div className="absolute left-[38vw] hidden">
-        <Dropsdown category="Laptop" className=" absolute right-[10vw]" />
-      </div>
-      <div className="absolute right-[29vw] hidden">
-        <Dropsdown category="Laptop" className=" absolute right-[10vw]" />
-      </div>
-      <div className="absolute right-[17vw] hidden">
-        <Dropsdown category="Laptop" className=" absolute right-[10vw]" />
-      </div>
+      
+
+  
         
 
       
@@ -68,3 +55,4 @@ function Header() {
 }
 
 export default Header;
+

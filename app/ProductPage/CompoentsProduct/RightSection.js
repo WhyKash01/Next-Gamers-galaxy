@@ -5,6 +5,8 @@ import Image from "next/image";
 import DisCard from "./DisCard";
 import "./ProPage.css"
 import Review from "./Review";
+import { Table } from "lucide-react";
+import { TableDemo } from "./TableDemo";
 
 const RightSection = (props) => {
   const object = props;
@@ -13,33 +15,29 @@ const RightSection = (props) => {
   return (
     <div className="w-[50vw] text-white">
       <div class="content">
-        <h2 className="text-4xl font-semibold mb-10">
-          ASUS TUF Gaming F15 Core i5 12th Gen - (16 GB/512 GB SSD/Windows 11
-          Pro/4 GB Graphics/NVIDIA GeForce RTX 3050) FX507ZC4-HN116W Gaming
-          Laptop (15.6 Inch, Mecha Gray, 2.20 Kg)
-        </h2>
-        <div className="price flex gap-10 font-serif text-3xl">
+        <h2 className="text-2xl font-semibold mb-5">
+          {props.LongName}</h2>
+        <div className="price flex gap-10 font-serif text-xl">
           <s className=" text-red-600">{props.OrPrice}</s>
           <h2 className=" text-green-800">{props.Price}</h2>
           <h4>{props.percent}</h4>
         </div>
-        <div className="mt-10">
+        <div className="mt-5">
             <Review/>
             
         </div>
-        <div class="flex gap-5 my-10">
-          <Image className="bg-white rounded-md" src={i2}></Image>
-          <h4 class="text-2xl">1 Year Onsite Warranty</h4>
+        <div class="flex gap-5 mt-5">
+          <Image className="bg-white rounded-sm h-7 w-20 my-auto " src={i2}></Image>
+          <h4 class="text-lg">1 Year Onsite Warranty</h4>
         </div>
 
-        <h1 className="text-5xl font-semibold mb-10">Product Description</h1>
+        <h1 className="text-3xl font-semibold mt-10 mb-5">Product Description</h1>
         <DisCard {...object} />
         <DisCard {...object} />
 
         
-          <h2 className="lg:text-5xl font-semibold">Specification</h2>
-          <h2 className="lg:text-3xl font-bold my-10">General</h2>
-          <table className="mb-10 ">
+          <h2 className="lg:text-3xl mb-5 font-semibold">Specification</h2>
+          {/* <table className="mb-5 ">
           <tbody>
           <tr className="flex text-2xl mb-5 font-semibold">
             <td className="w-[25vw]">Brand</td>
@@ -74,8 +72,8 @@ const RightSection = (props) => {
               <td>DDR5</td>
           </tr>
           </tbody>
-          </table>
-    
+          </table> */}
+          <TableDemo/>
         
       </div>
     

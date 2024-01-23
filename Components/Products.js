@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Product from "./Product";
 import Pagination from "./Pagination";
 import l1 from "../public/png/laptop1.webp";
@@ -26,8 +26,10 @@ import g3 from "../public/png/graphic3.webp";
 import g4 from "../public/png/graphic6.jpg";
 import g5 from "../public/png/graphic7.webp";
 function Products() {
-  let object= [
+  
+  const [object, setobject] = useState([
     {
+      id:"1",
       name: "Asus Tuf Gaming F15",
       src: l1,
       OrPrice:"₹1,03,990",
@@ -35,6 +37,7 @@ function Products() {
       percent:"17% off"
     },
     {
+      id:"2",
       name: "Acer 23.8 inch Full HD LED",
       src: m1,
       OrPrice:"₹11,800",
@@ -42,6 +45,7 @@ function Products() {
       percent:"32% off"
     },
     {
+      id:"3",
       name:"DELL G15",
       src: l2,
       OrPrice: "₹99,786",
@@ -49,6 +53,7 @@ function Products() {
       percent: "27% off"
     },
     {
+      id:"4",
       name:"ZEBRONICS 24 inch Full HD ",
       src: m2,
       OrPrice: "₹24,999",
@@ -56,6 +61,7 @@ function Products() {
       percent: "68% off"
     },
     {
+      id:"5",
       name:"RPM Euro Games Gaming Keyboard",
       src: k1,
       OrPrice: "₹1,490",
@@ -63,6 +69,7 @@ function Products() {
       percent: "52% off"
     },
     {
+      id:"6",
       name:"ZOTAC NVIDIA RTX 3050",
       src: g1,
       OrPrice: "₹41,070",
@@ -70,6 +77,7 @@ function Products() {
       percent: "42% off"
     },
     {
+      id:"7",
       name:"Acer Nitro 5",
       src: l3,
       OrPrice: "₹1,23,999",
@@ -77,6 +85,7 @@ function Products() {
       percent: "27% off"
     },
     {
+    id:"8",
       name:"Lenovo LOQ",
       src: l4,
       OrPrice: "₹1,33,790",
@@ -84,6 +93,7 @@ function Products() {
       percent: "25% off"
     },
     {
+    id:"9",
       name:"Acer Predator Neo (2023)",
       src: l5,
       OrPrice: "₹1,04,990",
@@ -91,6 +101,7 @@ function Products() {
       percent: "19% off"
     },
     {
+    id:"10",
       name:"ZEBRONICS 32 inch Curved",
       src: m3,
       OrPrice: "₹44,999",
@@ -98,6 +109,7 @@ function Products() {
       percent: "66% off"
     },
     {
+    id:"11",
       name:"MarQ by Flipkart 27 inch",
       src: m4,
       OrPrice: "₹21,999",
@@ -105,6 +117,7 @@ function Products() {
       percent: "45% off"
     },
     {
+    id:"12",
       name:"MSI 23.8 inch Full HD ",
       src: m5,
       OrPrice: "₹22,200",
@@ -112,6 +125,7 @@ function Products() {
       percent: "54% off"
     },
     {
+    id:"13",
       name:"EVOFOX Warhammer",
       src: k3,
       OrPrice: "₹1,499",
@@ -119,6 +133,7 @@ function Products() {
       percent: "26% off"
     },
     {
+    id:"14",
       name:"Ant Esports MK 1500 Mini",
       src: k4,
       OrPrice: "₹3,999",
@@ -126,6 +141,7 @@ function Products() {
       percent: "67% off"
     },
     {
+    id:"15",
       name:"Aula F3287 Mechanical ",
       src: k5,
       OrPrice: "₹6,999",
@@ -133,6 +149,7 @@ function Products() {
       percent: "68% off"
     },
     {
+    id:"16",
       name:"amd Ryzen 5 5600G ",
       src: p3,
       OrPrice: "₹34,500",
@@ -140,6 +157,7 @@ function Products() {
       percent: "60% off"
     },
     {
+    id:"17",
       name:"Intel i3-10105F 3.7 GHz",
       src: p4,
       OrPrice: "₹12,000",
@@ -147,6 +165,7 @@ function Products() {
       percent: "39% off"
     },
     {
+    id:"18",
       name:"amd Ryzen 9 5900X",
       src: p1,
       OrPrice: "₹75,000",
@@ -154,6 +173,7 @@ function Products() {
       percent: "57% off"
     },
     {
+    id:"19",
       name:"Intel i5-11400F 4.4 GHz",
       src: p2,
       OrPrice: "₹22,000",
@@ -161,6 +181,7 @@ function Products() {
       percent: "45% off"
     },
     {
+    id:"20",
       name:"Intel i7-12700F 4.9 GHz ",
       src: p5,
       OrPrice: "₹48,000",
@@ -168,6 +189,7 @@ function Products() {
       percent: "42% off"
     },
     {
+    id:"21",
       name:"ZOTAC NVIDIA GAMING GEFORCE GTX1650",
       src: g2,
       OrPrice: "₹22,385",
@@ -175,6 +197,7 @@ function Products() {
       percent: "46% off"
     },
     {
+    id:"22",
       name:"ZOTAC NVIDIA GeForce RTX 3060 ",
       src: g3,
       OrPrice: "₹44,400",
@@ -182,6 +205,7 @@ function Products() {
       percent: "37% off"
     },
     {
+    id:"23",
       name:"ASUS AMD Radeon DUAL RX560",
       src: g4,
       OrPrice: "₹19,999",
@@ -189,47 +213,31 @@ function Products() {
       percent: "49% off"
     },
     {
+      id:"24",
       name:"GIGABYTE AMD Radeon GV-R68XT",
       src: g5,
       OrPrice: "₹1,14,423",
       Price: "₹94,489",
       percent: "17% off"
     }
-  ]
+  ])
+  let displayProduct = object.map((i,t)=>
+  {
+    return (
+      
+    <Product key={t} {...i} />
+  )}
+  );
   
   return (
     <div className="bg-[#1f1f1f] text-white">
-      <h2 className=" text-center  py-[5vh] font-bold font-mono text-5xl ">
+      <h2 className=" text-center  py-[5vh] font-bold font-mono text-4xl ">
         Recommended Items
       </h2>
-      <div className=" grid md:grid-cols-3 grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 mx-[5vw] mb-10">
-      <Product {...object[0]} />
-      <Product {...object[1]} />
-      <Product {...object[2]} />
-      <Product {...object[3]} />
-      <Product {...object[4]} />
-      <Product {...object[5]} />
-      <Product {...object[6]} />
-      <Product {...object[7]} />
-      <Product {...object[8]} />
-      <Product {...object[9]} />
-      <Product {...object[10]} />
-      <Product {...object[11]} />
-      <Product {...object[12]} />
-      <Product {...object[13]} />
-      <Product {...object[14]} />
-      <Product {...object[15]} />
-      <Product {...object[16]} />
-      <Product {...object[17]} />
-      <Product {...object[18]} />
-      <Product {...object[19]} />
-      <Product {...object[20]} />
-      <Product {...object[21]} />
-      <Product {...object[22]} />
-      <Product {...object[23]} />
+      <div className=" grid md:grid-cols-3 grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-5 mx-10 mb-10">
+      {displayProduct}
       </div>
       <Pagination></Pagination>
-      
     </div>
   );
 }
