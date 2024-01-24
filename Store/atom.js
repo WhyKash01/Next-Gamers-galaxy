@@ -26,6 +26,7 @@ import g4 from "../public/png/graphic6.jpg";
 import g5 from "../public/png/graphic7.webp";
 
 import { atom, selector } from "recoil";
+import { Laptop, Monitor } from "lucide-react";
 const itemsInCart = atom({
   key: "itemsInCart",
   default: 1,
@@ -43,11 +44,20 @@ const OriginalPrice = atom({
   key: "OriginalPrice",
   default: 0,
 });
+const CatrgoryItem = atom({
+  key: "CatrgoryItem",
+  default: [],
+});
+const category = atom({
+  key: "Category",
+  default: ""
+});
 const data = atom({
   key: "data",
   default: [
     {
       id: 1,
+      category: "Laptop",
       name: "Asus Tuf Gaming F15",
       src: l1,
       LongName:
@@ -58,6 +68,7 @@ const data = atom({
     },
     {
       id: 2,
+      category: "Monitor",
       LongName:
         "Acer 23.8 inch Full HD LED Backlit VA Panel Gaming Monitor (QG241Y)  (Response Time: 1 ms, 100 Hz Refresh Rate)",
       name: "Acer 23.8 inch Full HD LED",
@@ -68,6 +79,7 @@ const data = atom({
     },
     {
       id: 3,
+      category: "Laptop",
       name: "DELL G15",
       LongName:
         "DELL G15 Intel Core i5 12th Gen 12500H - (8 GB/512 GB SSD/Windows 11 Home/4 GB Graphics/NVIDIA GeForce RTX 3050/120 Hz) G15-5520 Gaming Laptop  (15.6 Inch, Dark Shadow Grey, 2.57 kg, With MS Office)",
@@ -78,6 +90,7 @@ const data = atom({
     },
     {
       id: 4,
+      category: "Monitor",
       LongName:
         "ZEBRONICS 24 inch Full HD VA Panel Wall Mountable Monitor (ZEB-A24FHD LED)  (Response Time: 14 ms, 75 Hz Refresh Rate)",
       name: "ZEBRONICS 24 inch Full HD ",
@@ -88,6 +101,7 @@ const data = atom({
     },
     {
       id: 5,
+      category: "Keyboard",
       LongName:
         "RPM Euro Games Gaming Keyboard With 87 Keys & RGB Backlit | With Suspension Keys Wired USB Gaming Keyboard  (Black)",
       name: "RPM Euro Games Gaming Keyboard",
@@ -98,6 +112,7 @@ const data = atom({
     },
     {
       id: 6,
+      category: "GPU",
       LongName:
         "ZOTAC NVIDIA GAMING GEFORCE RTX 3050 ECO 8 GB GDDR6 Graphics Card",
       name: "ZOTAC NVIDIA RTX 3050",
@@ -112,6 +127,7 @@ const data = atom({
         "Acer Nitro 5 Intel Core i5 11th Gen 11400H - (8 GB/512 GB SSD/Windows 11 Home/4 GB Graphics/NVIDIA GeForce GTX 1650) AN515-57 Gaming Laptop  (15.6 inch, Shale Black, 2.2 kg)",
       name: "Acer Nitro 5",
       src: l3,
+      category: "Laptop",
       OrPrice: 123999,
       Price: 89990,
       percent: "27% off",
@@ -122,6 +138,7 @@ const data = atom({
         "Lenovo LOQ Intel Core i7 13th Gen 13620H - (16 GB/512 GB SSD/Windows 11 Home/8 GB Graphics/NVIDIA GeForce RTX 4060) 15IRH8 Gaming Laptop  (15.6 Inch, Storm Grey, 2.4 kg, With MS Office)",
       name: "Lenovo LOQ",
       src: l4,
+      category: "Laptop",
       OrPrice: 133790,
       Price: 99990,
       percent: "25% off",
@@ -132,12 +149,14 @@ const data = atom({
         "Acer Predator Neo (2023) Intel Core i7 13th Gen 13700HX - (16 GB/1 TB SSD/Windows 11 Home/6 GB Graphics/NVIDIA GeForce RTX 4050) PHN16-71-757P Gaming Laptop  (16 Inch, Obsidian Black, 2.6 Kg)",
       name: "Acer Predator Neo (2023)",
       src: l5,
+      category: "Laptop",
       OrPrice: 104990,
       Price: 129999,
       percent: "19% off",
     },
     {
       id: 10,
+      category: "Monitor",
       LongName:
         "ZEBRONICS 32 inch Curved Full HD VA Panel 80 cm, Wall Mountable, Slim Gaming Monitor (ZEB-AC32FHD LED)  (Response Time: 12 ms, 165 Hz Refresh Rate)",
       name: "ZEBRONICS 32 inch Curved",
@@ -148,6 +167,7 @@ const data = atom({
     },
     {
       id: 11,
+      category: "Monitor",
       LongName:
         "MarQ by Flipkart 27 inch Full HD IPS Panel Gaming Monitor (27FHDMIQII2G)  (AMD Free Sync, Response Time: 1 ms, 165 Hz Refresh Rate)",
       name: "MarQ by Flipkart 27 inch",
@@ -158,6 +178,7 @@ const data = atom({
     },
     {
       id: 12,
+      category: "Monitor",
       LongName:
         "MSI 23.8 inch Full HD IPS Panel Wide Color Gamut, Anti-Flicker & Less Blue Light Esports Gaming Monitor (G2422)  (AMD Free Sync, Response Time: 1 ms, 170 Hz Refresh Rate)",
       name: "MSI 23.8 inch Full HD ",
@@ -168,6 +189,7 @@ const data = atom({
     },
     {
       id: 13,
+      category: "Keyboard",
       LongName:
         "EVOFOX Warhammer Floating Keycaps, 19 Anti Ghosting Keys and LED Backlit Wired USB Gaming Keyboard (Black)",
       name: "EVOFOX Warhammer",
@@ -177,6 +199,7 @@ const data = atom({
       percent: "26% off",
     },
     {
+      category: "Keyboard",
       id: 14,
       LongName:
         "Ant Esports MK 1500 Mini / 60% Pro RGB, Type-C Charging, 1000 mAh battery, Membrane Wireless Gaming Keyboard (White)",
@@ -187,6 +210,7 @@ const data = atom({
       percent: "67% off",
     },
     {
+      category: "Keyboard",
       id: 15,
       LongName:
         "Aula F3287 Mechanical / Rainbow Backlight, Anti-ghosting, Blue switch, TKL Wired USB Gaming Keyboard  (Grey, White)",
@@ -198,6 +222,7 @@ const data = atom({
     },
     {
       id: 16,
+      category: "Processor",
       LongName:
         "AMD Ryzen 5 5600G 3.9 GHz Upto 4.4 GHz AM4 Socket 6 Cores 12 Threads 3 kB L2 16 kB L3 Desktop Processor  (Grey)",
       name: "AMD Ryzen 5 5600G ",
@@ -208,6 +233,7 @@ const data = atom({
     },
     {
       id: 17,
+      category: "Processor",
       LongName:
         "Intel i3 10TH GEN 10105F 3.7 GHz LGA 1200 Socket 4 Cores Desktop Processor (Blue)",
       name: "Intel i3-10105F 3.7 GHz",
@@ -218,6 +244,7 @@ const data = atom({
     },
     {
       id: 18,
+      category: "Processor",
       LongName:
         "amd Ryzen 9 5900X 3.7 GHz Upto 4.8 GHz AM4 Socket 12 Cores 24 Threads Desktop Processor (Silver)",
       name: "amd Ryzen 9 5900X",
@@ -228,6 +255,7 @@ const data = atom({
     },
     {
       id: 19,
+      category: "Processor",
       LongName:
         "Intel i5-11400F 4.4 GHz Upto 2.6 GHz LGA 1200 Socket 6 Cores 12 Threads Desktop Processor  (Blue)",
       name: "Intel i5-11400F 4.4 GHz",
@@ -238,6 +266,7 @@ const data = atom({
     },
     {
       id: 20,
+      category: "Processor",
       LongName:
         "Intel i7-12700 4.9 GHz Upto 4.9 GHz LGA1700 Socket 12 Cores 20 Threads Desktop Processor  (Blue)",
       name: "Intel i7-12700 4.9 GHz ",
@@ -248,6 +277,7 @@ const data = atom({
     },
     {
       id: 21,
+      category: "GPU",
       LongName:
         "ZOTAC NVIDIA GAMING GEFORCE GTX1650 DUAL FAN 4 GB GDDR6 Graphics Card",
       name: "ZOTAC NVIDIA GAMING GEFORCE GTX1650",
@@ -258,6 +288,7 @@ const data = atom({
     },
     {
       id: 22,
+      category: "GPU",
       LongName:
         "ZOTAC NVIDIA GeForce RTX 3060 Twin Edge 12 GB GDDR6 Graphics Card",
       name: "ZOTAC NVIDIA GeForce RTX 3060 ",
@@ -268,6 +299,7 @@ const data = atom({
     },
     {
       id: 23,
+      category: "GPU",
       LongName: "ASUS AMD Radeon DUAL RX560 4 GB GDDR5 Graphics Card",
       name: "ASUS AMD Radeon DUAL RX560",
       src: g4,
@@ -277,6 +309,7 @@ const data = atom({
     },
     {
       id: 24,
+      category: "GPU",
       LongName:
         "GIGABYTE AMD Radeon GV-R66XTGAMING OC-8GD 8 GB GDDR6 Graphics Card",
       name: "GIGABYTE AMD Radeon GV-R68XT",
@@ -289,4 +322,4 @@ const data = atom({
 });
 
 export default itemsInCart;
-export { itemAdded, data, price, OriginalPrice };
+export { itemAdded, data, price, OriginalPrice, CatrgoryItem, category };

@@ -4,16 +4,15 @@ import Link from 'next/link';
 function Product(props) {
   
   return (
-    <div className="row overflow-hidden shadow-inner shadow-zinc-700 bg-white p-5 rounded-lg text-center text-black ">
+    <div className="row overflow-hidden hover:shadow-2xl z-40 hover:z-50 border border-zinc-200 shadow-zinc-900 bg-white p-5  text-center text-black ">
+            <Link href={`ProductPage?id=${props.id}`} className=' overflow-hidden'>
             <div className="p1" id="1">
             
-            <Link href={`ProductPage?id=${props.id}`} className=' overflow-hidden'>
                 <div className='h-[15vw]  items-center hover:scale-105 overflow-hidden delay-100 ease-in-out duration-300 translate justify-center my-auto flex'>
                 <Image  className=' max-h-[14vw] w-auto mx-auto ' src={props.src} alt="" />
                 
                 </div>
-            </Link>
-              <h3 id="name" className="text-2xl font-semibold line-clamp-1 my-2">
+              <h3 id="name" className="text-xl font-semibold line-clamp-1 my-2">
                 {props.name}
               </h3>
               <div className="price flex justify-between font-serif text-lg mx-[10%] ">
@@ -22,6 +21,7 @@ function Product(props) {
                 <h4>{props.percent}</h4>
               </div>
             </div>
+            </Link>
           </div>
     
   )
