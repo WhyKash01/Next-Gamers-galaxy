@@ -50,7 +50,15 @@ const CatrgoryItem = atom({
 });
 const category = atom({
   key: "Category",
-  default: ""
+  default: "",
+});
+const minPrice = atom({
+  key: "minprice",
+  default: 0,
+});
+const maxPrice = atom({
+  key: "maxprice",
+  default: 200000,
 });
 const data = atom({
   key: "data",
@@ -320,6 +328,25 @@ const data = atom({
     },
   ],
 });
+const SelectPrice= atom({
+  key: "SelectPrice",
+  default: [500,1000,2000,5000,10000,30000,50000,100000]
+})
+const SelectPrice1= atom({
+  key: "SelectPrice",
+  default: [500,1000,2000,5000,10000,30000,50000,100000]
+})
 
 export default itemsInCart;
-export { itemAdded, data, price, OriginalPrice, CatrgoryItem, category };
+export {
+  SelectPrice,
+  SelectPrice1,
+  maxPrice,
+  minPrice,
+  itemAdded,
+  data,
+  price,
+  OriginalPrice,
+  CatrgoryItem,
+  category,
+};

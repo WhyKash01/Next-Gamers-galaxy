@@ -15,22 +15,23 @@ const LeftSection = (props) => {
       <div className="absolute w-[30vw] rounded-xl flex flex-col gap-5">
         <div className=" my-auto bg-white p-10 rounded-md w-full">
           <Image
+            alt=""
             src={props.src}
             className="mx-auto hover:scale-110 delay-100 ease-in-out duration-500 translate w-[90y%]"
           ></Image>
         </div>
         <div className=" flex gap-1 justify-between">
           <button className="   focus:outline-none focus:border-2 focus:border-red-500 w-[6.5vw] p-2 rounded-md hover:border-red-500 hover:border-2 bg-white ">
-            <Image className="" src={props.src}></Image>
+            <Image alt="" className="" src={props.src}></Image>
           </button>
           <button className="   focus:outline-none focus:border-2 focus:border-red-500 w-[6.5vw] p-2 rounded-md hover:border-red-500 hover:border-2 bg-white ">
-            <Image className="" src={props.src}></Image>
+            <Image alt="" className="" src={props.src}></Image>
           </button>
           <button className="   focus:outline-none focus:border-2 focus:border-red-500 w-[6.5vw] p-2 rounded-md hover:border-red-500 hover:border-2 bg-white ">
-            <Image className="" src={props.src}></Image>
+            <Image alt="" className="" src={props.src}></Image>
           </button>
           <button className="   focus:outline-none focus:border-2 focus:border-red-500 w-[6.5vw] p-2 rounded-md hover:border-red-500 hover:border-2 bg-white ">
-            <Image className="" src={props.src}></Image>
+            <Image alt="" className="" src={props.src}></Image>
           </button>
         </div>
         <div className="flex justify-between gap-5 text-lg font-semibold">

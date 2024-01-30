@@ -18,7 +18,7 @@ const Drop = (props) => {
   const [object, setObject] = useRecoilState(data);
   const [Category, setCategory] = useRecoilState(category);
   
-  
+  console.log(items)
   const categoryHandler = () => {
     setCategory(props.title);
     console.log(items);
@@ -51,19 +51,19 @@ const Drop = (props) => {
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=1`}>Asus Tuf Gaming F15</Link>
+                <Link href={`ProductPage?id=6`}>ZOTAC NVIDIA RTX 3050</Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=3`}>DELL G15</Link>
+                <Link href={`ProductPage?id=21`}>ZOTAC NVIDIA GAMING GEFORCE GTX1650</Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=7`}>Acer Nitro 5</Link>
+                <Link href={`ProductPage?id=22`}>ZOTAC NVIDIA GeForce RTX 3060</Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=8`}>Lenovo LOQ</Link>
+                <Link href={`ProductPage?id=23`}>ASUS AMD Radeon DUAL RX560</Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=9`}>Acer Predator Neo</Link>
+                <Link href={`ProductPage?id=24`}>GIGABYTE AMD Radeon GV-R68XT</Link>
           </DropdownMenuItem>
         </DropdownMenuContent>
         

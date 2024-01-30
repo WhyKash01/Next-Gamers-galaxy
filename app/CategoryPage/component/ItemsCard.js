@@ -16,6 +16,7 @@ const ItemsCard = (props) => {
       <Image
         className="max-h-[13rem] max-w-[17rem] mx-auto"
         src={props.src}
+        alt=""
         ></Image>
       </div>
       <div className="flex items-center">

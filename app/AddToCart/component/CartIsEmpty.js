@@ -7,6 +7,7 @@ const CartIsEmpty = () => {
     <div className=" bg-[#3e3e3e] rounded-xl p-0  my-5">
       <Image
         src={EmptyImg}
+        alt="EmptyImg"
         className="w-[300px] h-[300px] items-center mx-auto"
       ></Image>
       <h2 className=" text-center text-3xl font-semibold text-white">

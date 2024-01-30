@@ -1,6 +1,6 @@
 "use client";
 import "../../ProductPage/CompoentsProduct/ProPage.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import i1 from "../../../public/png/laptop1.webp";
 import Review from "@/app/ProductPage/CompoentsProduct/Review";
@@ -21,27 +21,54 @@ const CartItem = (props) => {
   //     setQuantity(Quantity - 1);
   //   }
   // };
+  
   const deleteHandler=()=> {
     const items=item.filter(item =>item.id !==parseInt(props.id))
-    setTimeout(() => {
       setitem(items)
-    }, 200);
+      
+        item.map((data,index)=>{ 
+          sumPrice = sumPrice - object[data.id-1].Price 
+          setOrderPrice(sumPrice )
+        })
+      
+      
+    
+        item.map((data,index)=>{ 
+          OriginalsumPrice = OriginalsumPrice - object[data.id-1].OrPrice 
+          console.log("Original: "+OriginalsumPrice)
+          setOriginalPrice(OriginalsumPrice )
+        })
+        
+      
   }
+
   let sumPrice=0;
-  item.map((data,index)=>{ 
-    sumPrice = sumPrice + object[data.id-1].Price 
-    setOrderPrice(sumPrice )
-  })
+  useEffect(() => {
+    item.map((data,index)=>{ 
+      sumPrice = sumPrice + object[data.id-1].Price 
+      console.log("Total: "+sumPrice)
+      setOrderPrice(sumPrice )
+    })
+  }, [OrderPrice])
+  
   let OriginalsumPrice=0;
-  item.map((data,index)=>{ 
-    OriginalsumPrice = OriginalsumPrice + object[data.id-1].OrPrice 
-    setOriginalPrice(OriginalsumPrice )
-  })
+  useEffect(() => {
+    
+    item.map((data,index)=>{ 
+      OriginalsumPrice = OriginalsumPrice + object[data.id-1].OrPrice 
+      console.log("Original: "+OriginalsumPrice)
+      setOriginalPrice(OriginalsumPrice )
+    })
+    
+  }, [originalPrice])
+  
+  
 
   return (
     <div className="flex gap-10 bg-[#3e3e3e] rounded-xl p-5  my-10">
       <div className="flex items-center p-5 bg-white rounded-lg ">
       <Image
+      alt="Main Image"
         className=" max-w-[16rem] max-h-[13rem] mx-auto"
         src={object[props.id-1].src}
       ></Image>

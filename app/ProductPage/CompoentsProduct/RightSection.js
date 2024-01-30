@@ -27,7 +27,7 @@ const RightSection = (props) => {
             
         </div>
         <div class="flex gap-5 mt-5">
-          <Image className="bg-white rounded-sm h-7 w-20 my-auto " src={i2}></Image>
+          <Image alt="" className="bg-white rounded-sm h-7 w-20 my-auto " src={i2}></Image>
           <h4 class="text-lg">1 Year Onsite Warranty</h4>
         </div>
 

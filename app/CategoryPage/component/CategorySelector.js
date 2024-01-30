@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import down from '@/public/png/drop1.png'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,21 +11,19 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import Image from "next/image";
 import { useRecoilState } from "recoil";
 import { CatrgoryItem, category, data } from "@/Store/atom";
-import { Laptop } from "lucide-react";
-const Drop = (props) => {
+const Drop = () => {
   const [items, setItems] = useRecoilState(CatrgoryItem);
   const [object, setObject] = useRecoilState(data);
   const [Category, setCategory] = useRecoilState(category);
-  
-  
   const categoryHandler = () => {
     setCategory(props.title);
     console.log(items);
   };
   useEffect(() => {
-    const CatItems = object.filter((item) => item.category === props.title);
+    const CatItems = object.filter((item) => item.category === "Laptop");
     setItems(CatItems);
     // console.log(items)
     console.log(items);
@@ -36,36 +35,29 @@ const Drop = (props) => {
           className=" text-xl"
           asChild
         >
-          <button onClick={()=>{
-            
-          }} className="bg-black">{props.title}</button>
+          <button className="text-white flex">{Category} <Image className="w-4 relative left-4 top-2" src={down}></Image></button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className=" px-5 py-2">
           <DropdownMenuLabel className="text-black">
-            More in {props.title}
+            Choose Category
           </DropdownMenuLabel>
           <DropdownMenuSeparator className="bg-black" />
-          <DropdownMenuItem asChild>
-            <Link onClick={categoryHandler} href="CategoryPage">
-              All {props.title}s
-            </Link>
+          <DropdownMenuItem onClick={()=>{setCategory("Laptop")}}>
+            Laptop
           </DropdownMenuItem>
-          <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=1`}>Asus Tuf Gaming F15</Link>
+          <DropdownMenuItem onClick={()=>{setCategory("Monitor")}}>
+            Monitor
           </DropdownMenuItem>
-          <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=3`}>DELL G15</Link>
+          <DropdownMenuItem onClick={()=>{setCategory("GPU")}}>
+            GPU
           </DropdownMenuItem>
-          <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=7`}>Acer Nitro 5</Link>
+          <DropdownMenuItem onClick={()=>{setCategory("Processor")}}>
+            Processor
           </DropdownMenuItem>
-          <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=8`}>Lenovo LOQ</Link>
+          <DropdownMenuItem onClick={()=>{setCategory("Keyboard")}}>
+            Keyboard
           </DropdownMenuItem>
-          <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=9`}>Acer Predator Neo</Link>
-          </DropdownMenuItem>
-        </DropdownMenuContent>
+          </DropdownMenuContent>
         
       </DropdownMenu>
     </div>

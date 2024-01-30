@@ -27,7 +27,7 @@ const CartItems = () => {
             </Link>
           </div>
           <div className=" flex gap-5">
-            <Image className="w-10 h-10" src={shild} alt=""></Image>
+            <Image className="w-10 h-10" src={shild} alt="verifide"></Image>
             <h3 className="text-white text-sm">
               Safe and Secure Payments.Easy returns.100% Authentic products.
             </h3>

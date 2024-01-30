@@ -15,7 +15,7 @@ const CategoryItem = () => {
     setItems(CatItems);
     // console.log(items)
     console.log(CatItems);
-  }, []);
+  }, [Category]);
   return (
     <div className="flex">
         <div className="w-[20vw] border border-zinc-600 m-2 bg-zinc-800">
@@ -32,8 +32,8 @@ const CategoryItem = () => {
       <div className="grid grid-cols-2 my-5 mx-10">
         {items.map((data, index) => {
           return (
-            <div>
-              <ItemsCard {...data}></ItemsCard>
+            <div key={index}>
+              <ItemsCard {...data} ></ItemsCard>
             </div>
           );
         })}

@@ -17,11 +17,9 @@ const Drop = (props) => {
   const [items, setItems] = useRecoilState(CatrgoryItem);
   const [object, setObject] = useRecoilState(data);
   const [Category, setCategory] = useRecoilState(category);
-  
-  
   const categoryHandler = () => {
     setCategory(props.title);
-    console.log(items);
+    console.log("hi");
   };
   useEffect(() => {
     const CatItems = object.filter((item) => item.category === props.title);
@@ -45,25 +43,22 @@ const Drop = (props) => {
             More in {props.title}
           </DropdownMenuLabel>
           <DropdownMenuSeparator className="bg-black" />
-          <DropdownMenuItem asChild>
+          <DropdownMenuItem>
             <Link onClick={categoryHandler} href="CategoryPage">
-              All {props.title}s
+            All {props.title}s
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=1`}>Asus Tuf Gaming F15</Link>
+                <Link href={`ProductPage?id=5`}>RPM Euro Games Gaming Keyboard</Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=3`}>DELL G15</Link>
+                <Link href={`ProductPage?id=13`}>EVOFOX Warhammer</Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=7`}>Acer Nitro 5</Link>
+                <Link href={`ProductPage?id=14`}>Ant Esports MK 1500 Mini</Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=8`}>Lenovo LOQ</Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=9`}>Acer Predator Neo</Link>
+                <Link href={`ProductPage?id=15`}>Aula F3287 Mechanical</Link>
           </DropdownMenuItem>
         </DropdownMenuContent>
         

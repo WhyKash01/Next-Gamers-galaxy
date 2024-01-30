@@ -18,7 +18,7 @@ const Drop = (props) => {
   const [object, setObject] = useRecoilState(data);
   const [Category, setCategory] = useRecoilState(category);
   
-  
+  console.log(items)
   const categoryHandler = () => {
     setCategory(props.title);
     console.log(items);
@@ -47,23 +47,23 @@ const Drop = (props) => {
           <DropdownMenuSeparator className="bg-black" />
           <DropdownMenuItem asChild>
             <Link onClick={categoryHandler} href="CategoryPage">
-              All {props.title}s
+            All {props.title}s
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=1`}>Asus Tuf Gaming F15</Link>
+                <Link href={`ProductPage?id=18`}>amd Ryzen 9 5900X</Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=3`}>DELL G15</Link>
+                <Link href={`ProductPage?id=19`}>Intel i5-11400F 4.4 GHz</Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=7`}>Acer Nitro 5</Link>
+                <Link href={`ProductPage?id=20`}>Intel i7-12700 4.9 GHz</Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=8`}>Lenovo LOQ</Link>
+                <Link href={`ProductPage?id=16`}>AMD Ryzen 5 5600G</Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=9`}>Acer Predator Neo</Link>
+                <Link href={`ProductPage?id=17`}>Intel i3-10105F 3.7 GHz</Link>
           </DropdownMenuItem>
         </DropdownMenuContent>
         

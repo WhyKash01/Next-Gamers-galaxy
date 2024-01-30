@@ -18,7 +18,7 @@ const Drop = (props) => {
   const [object, setObject] = useRecoilState(data);
   const [Category, setCategory] = useRecoilState(category);
   
-  
+  console.log(items)
   const categoryHandler = () => {
     setCategory(props.title);
     console.log(items);
@@ -51,19 +51,19 @@ const Drop = (props) => {
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=1`}>Asus Tuf Gaming F15</Link>
+                <Link href={`ProductPage?id=2`}>Acer 23.8 inch Full HD LED</Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=3`}>DELL G15</Link>
+                <Link href={`ProductPage?id=4`}>ZEBRONICS 24 inch Full HD</Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=7`}>Acer Nitro 5</Link>
+                <Link href={`ProductPage?id=10`}>ZEBRONICS 32 inch Curved</Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=8`}>Lenovo LOQ</Link>
+                <Link href={`ProductPage?id=11`}>MarQ by Flipkart 27 inch</Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-                <Link href={`ProductPage?id=9`}>Acer Predator Neo</Link>
+                <Link href={`ProductPage?id=12`}>MSI 23.8 inch Full HD</Link>
           </DropdownMenuItem>
         </DropdownMenuContent>
         
