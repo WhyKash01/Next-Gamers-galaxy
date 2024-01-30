@@ -1,6 +1,7 @@
 .swiper-button-next,
 .swiper-button-prev{
     color: red;
+    
 }
 
 .swiper-button-next:after,
@@ -20,4 +21,19 @@
 .swiper-scrollbar-drag{
     background: rgba(255, 255, 255, 0.579);
     
+}
+.swiper-pagination-bullet{
+    background-color: red;
+    
+}
+@media screen and (Max-width:480px) {
+    .swiper-button-next:after,
+.swiper-button-prev:after{
+    font-size: 15px;
+}
+.swiper-pagination-bullet{
+    width: 5px;
+    height: 5px;
+    
+}
 }

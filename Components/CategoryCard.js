@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import l1 from "../public/png/laptop5.webp";
 import k4 from "../public/png/keyboard5.webp";
 import m2 from "../public/png/monitor3.webp";
@@ -15,22 +15,35 @@ import { useRecoilState } from 'recoil';
 import { category } from '@/Store/atom';
 
 const CategoryCard = () => {
+  const [size, setSize]= useState({
+    width: window.innerWidth,
+    height: window.innerHeight
+  })
+  const [nub, setNum]= useState(5);
+  const [nubs, setNums]= useState(20);
+  useEffect(() => {
+    if(size.width<400){
+      setNum(3)
+      setNums(10)
+    }
+  }, [])
   const [Category, setCategory]= useRecoilState(category);
-  let im= 'h-[15vw] items-center justify-center my-auto flex'
-  let text= "mt-10 text-center text-2xl font-semibold"
-  let card = "border bg-white p-5 overflow-hidden rounded-lg justify-center items-center my-auto";
+  let im= 'h-[15vw]  items-center justify-center my-auto flex'
+  let text= "sm:mt-10 mt-1 text-center sm:text-2xl text-xs font-semibold"
+  let card = "border bg-white sm:p-5 p-2 overflow-hidden sm:rounded-lg rounded-sm justify-center items-center my-auto";
   return (
     <Swiper
     modules={[Navigation, Scrollbar, A11y]}
-    spaceBetween={20}
-    slidesPerView={5}
+    spaceBetween={nubs}
+    slidesPerView={nub}
     navigation
     scrollbar={{ draggable: true }}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
     >
       <SwiperSlide>
-        <Link onClick={()=>setCategory("Laptop")} href="CategoryPage">
+        <Link onClick={()=>{
+          setCategory("Laptop")}} href="CategoryPage">
         <div className={card}>
                 <div className={im}>
                 <Image  className='max-h-[15vw] w-auto mx-auto ' src={l1} alt="" />

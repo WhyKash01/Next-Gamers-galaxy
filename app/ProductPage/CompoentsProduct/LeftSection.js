@@ -11,13 +11,13 @@ const LeftSection = (props) => {
   }
   const setItemInCart = useSetRecoilState(itemAdded);
   return (
-    <div className="w-[30vw]">
-      <div className="absolute w-[30vw] rounded-xl flex flex-col gap-5">
+    <div className="sm:w-[30vw] ">
+      <div className="sm:absolute sm:w-[30vw]  rounded-xl flex flex-col gap-5">
         <div className=" my-auto bg-white p-10 rounded-md w-full">
           <Image
             alt=""
             src={props.src}
-            className="mx-auto hover:scale-110 delay-100 ease-in-out duration-500 translate w-[90y%]"
+            className="mx-auto hover:scale-110 delay-100 ease-in-out duration-500 translate w-[90%]"
           ></Image>
         </div>
         <div className=" flex gap-1 justify-between">

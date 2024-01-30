@@ -231,10 +231,10 @@ function Products() {
   
   return (
     <div className="bg-[#1f1f1f] text-white">
-      <h2 className=" text-center  py-[5vh] font-bold font-mono text-4xl ">
+      <h2 className=" text-center  sm:py-[5vh] py-3 font-bold font-mono sm:text-4xl text-xl ">
         Recommended Items
       </h2>
-      <div className=" grid md:grid-cols-3 grid-cols-1 gap-x-6 gap-y-0 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-0 mx-10 mb-10">
+      <div className=" grid md:grid-cols-3 grid-cols-2 gap-x-0 gap-y-0 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-0 sm:mx-10 mx-5 mb-10">
       {displayProduct}
       </div>
       <Pagination></Pagination>

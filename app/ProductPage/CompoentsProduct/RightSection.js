@@ -13,25 +13,23 @@ const RightSection = (props) => {
   const i1 = object.src;
 
   return (
-    <div className="w-[50vw] text-white">
+    <div className="sm:w-[50vw] text-white">
       <div class="content">
-        <h2 className="text-2xl font-semibold mb-5">
+        <h2 className="sm:text-2xl text-lg line-clamp-3 font-semibold sm:mb-5 mb-2">
           {props.LongName}</h2>
-        <div className="price flex gap-10 font-serif text-xl">
+        <div className="price flex sm:gap-10 gap-5 font-serif sm:text-xl text-lg">
           <s className=" text-red-600">{props.OrPrice}</s>
           <h2 className=" text-green-800">{props.Price}</h2>
           <h4>{props.percent}</h4>
         </div>
-        <div className="mt-5">
+        <div className="sm:mt-5 mt-2">
             <Review/>
-            
         </div>
-        <div class="flex gap-5 mt-5">
-          <Image alt="" className="bg-white rounded-sm h-7 w-20 my-auto " src={i2}></Image>
-          <h4 class="text-lg">1 Year Onsite Warranty</h4>
+        <div class="flex gap-5 sm:mt-5 mt-2">
+          <Image alt="" className="bg-white rounded-sm sm:h-7 h-4 w-16 sm:w-20 my-auto " src={i2}></Image>
+          <h4 class="sm:text-lg items-center text-sm">1 Year Onsite Warranty</h4>
         </div>
-
-        <h1 className="text-3xl font-semibold mt-10 mb-5">Product Description</h1>
+        <h1 className="sm:text-3xl text-xl font-semibold sm:mt-10 mt-5 sm:mb-5 mb-2">Product Description</h1>
         <DisCard {...object} />
         <DisCard {...object} />
 

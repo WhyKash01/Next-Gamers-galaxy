@@ -252,7 +252,7 @@ const page = (props) => {
   const id = parseInt(search)
   return (
     <div>
-    <div className=' mx-[5vw]  bg-[#171717] mt-[5vh] flex gap-[5vw]'>
+    <div className=' mx-[5vw]  bg-[#171717] mt-[5vh] flex sm:flex-row flex-col gap-[5vw]'>
 
         <LeftSection {...object[id-1]}/>
         <RightSection {...object[id-1]}/>
