@@ -330,11 +330,11 @@ const data = atom({
 });
 const SelectPrice= atom({
   key: "SelectPrice",
-  default: [500,1000,2000,5000,10000,30000,50000,100000]
+  default: [0,500,1000,2000,5000,10000,30000,50000,100000]
 })
 const SelectPrice1= atom({
-  key: "SelectPrice",
-  default: [500,1000,2000,5000,10000,30000,50000,100000]
+  key: "SelectPrice1",
+  default: [500,1000,2000,5000,10000,30000,50000,100000,1000000]
 })
 
 export default itemsInCart;
