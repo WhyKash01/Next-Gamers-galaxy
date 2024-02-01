@@ -13,12 +13,13 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
 import { useRecoilState } from "recoil";
-import { CatrgoryItem, SelectPrice1, category, data, maxPrice, minPrice } from "@/Store/atom";
+import { CatrgoryItem, SelectPrice1, StarAbove, category, data, maxPrice, minPrice } from "@/Store/atom";
 const Drop = () => {
   const [items, setItems] = useRecoilState(CatrgoryItem);
   const [object, setObject] = useRecoilState(data);
   const [Category, setCategory] = useRecoilState(category);
   const [Maxprice, setMaxprice]= useRecoilState(maxPrice)
+  const [starAbove, setstarAbove]=useRecoilState(StarAbove);
   const [Minprice, setMinprice]= useRecoilState(minPrice)
   const [selectPrice1,setSelectPrice1]= useRecoilState(SelectPrice1);  
   const [selarr,setselarr]= useState(selectPrice1)
@@ -28,7 +29,7 @@ useEffect(() => {
     setselarr(SelectPr)
 }, [Minprice])
   useEffect(() => {
-    const CatItems = object.filter((item) => item.Price <= Maxprice && item.category === Category && item.Price>=Minprice);
+    const CatItems = object.filter((item) => item.Price <= Maxprice && item.rating>=starAbove && item.category === Category && item.Price>=Minprice);
     setItems(CatItems);
   }, [Minprice,Maxprice]);
   return (

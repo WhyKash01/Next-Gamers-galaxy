@@ -4,10 +4,11 @@ import { useRecoilState } from 'recoil'
 import CategorySelector from './CategorySelector'
 import MinPrice from './MinPrice'
 import MaxPrice from './MaxPrice'
+import CustomerRating from './CustomerRating'
 const Filter = () => {
     const [Category, setCategory] = useRecoilState(category)
   return (
-    <div className=''>
+    <div className=' border border-zinc-600 m-2 bg-zinc-800'>
         <h2 className='text-white text-xl mt-5 mx-10 font-semibold'>Filters</h2>
         <div className='border-y border-zinc-600 mt-5'>
             <h2 className='text-white text-lg my-5 mx-10 font-semibold'>Category</h2>
@@ -22,6 +23,9 @@ const Filter = () => {
             <h3 className='text-xl'>to</h3>
             <MaxPrice/>
             </div>
+        </div>
+        <div className='border-b border-zinc-600 mt-5'>
+          <CustomerRating/>
         </div>
     </div>
   )

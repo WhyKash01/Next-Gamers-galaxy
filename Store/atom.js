@@ -68,6 +68,7 @@ const data = atom({
       category: "Laptop",
       name: "Asus Tuf Gaming F15",
       src: l1,
+      rating: 4.2,
       LongName:
         "ASUS TUF Gaming F15 - AI Powered Gaming Intel Core i5 11th Gen 11260H - (8 GB/512 GB SSD/Windows 11 Home/4 GB Graphics/NVIDIA GeForce RTX 2050/144 Hz/70 TGP) FX506HF-HN075W Gaming Laptop  (15.6 Inch, Graphite Black, 2.30 kg)",
       OrPrice: 103990,
@@ -76,6 +77,7 @@ const data = atom({
     },
     {
       id: 2,
+      rating: 4.5,
       category: "Monitor",
       LongName:
         "Acer 23.8 inch Full HD LED Backlit VA Panel Gaming Monitor (QG241Y)  (Response Time: 1 ms, 100 Hz Refresh Rate)",
@@ -87,6 +89,7 @@ const data = atom({
     },
     {
       id: 3,
+      rating: 4.7,
       category: "Laptop",
       name: "DELL G15",
       LongName:
@@ -98,6 +101,7 @@ const data = atom({
     },
     {
       id: 4,
+      rating: 4.2,
       category: "Monitor",
       LongName:
         "ZEBRONICS 24 inch Full HD VA Panel Wall Mountable Monitor (ZEB-A24FHD LED)  (Response Time: 14 ms, 75 Hz Refresh Rate)",
@@ -109,6 +113,7 @@ const data = atom({
     },
     {
       id: 5,
+      rating: 3.1,
       category: "Keyboard",
       LongName:
         "RPM Euro Games Gaming Keyboard With 87 Keys & RGB Backlit | With Suspension Keys Wired USB Gaming Keyboard  (Black)",
@@ -120,6 +125,7 @@ const data = atom({
     },
     {
       id: 6,
+      rating: 4.3,
       category: "GPU",
       LongName:
         "ZOTAC NVIDIA GAMING GEFORCE RTX 3050 ECO 8 GB GDDR6 Graphics Card",
@@ -131,6 +137,7 @@ const data = atom({
     },
     {
       id: 7,
+      rating: 3.8,
       LongName:
         "Acer Nitro 5 Intel Core i5 11th Gen 11400H - (8 GB/512 GB SSD/Windows 11 Home/4 GB Graphics/NVIDIA GeForce GTX 1650) AN515-57 Gaming Laptop  (15.6 inch, Shale Black, 2.2 kg)",
       name: "Acer Nitro 5",
@@ -142,6 +149,7 @@ const data = atom({
     },
     {
       id: 8,
+      rating: 3.9,
       LongName:
         "Lenovo LOQ Intel Core i7 13th Gen 13620H - (16 GB/512 GB SSD/Windows 11 Home/8 GB Graphics/NVIDIA GeForce RTX 4060) 15IRH8 Gaming Laptop  (15.6 Inch, Storm Grey, 2.4 kg, With MS Office)",
       name: "Lenovo LOQ",
@@ -153,6 +161,7 @@ const data = atom({
     },
     {
       id: 9,
+      rating: 4.5,
       LongName:
         "Acer Predator Neo (2023) Intel Core i7 13th Gen 13700HX - (16 GB/1 TB SSD/Windows 11 Home/6 GB Graphics/NVIDIA GeForce RTX 4050) PHN16-71-757P Gaming Laptop  (16 Inch, Obsidian Black, 2.6 Kg)",
       name: "Acer Predator Neo (2023)",
@@ -164,6 +173,7 @@ const data = atom({
     },
     {
       id: 10,
+      rating: 4.4,
       category: "Monitor",
       LongName:
         "ZEBRONICS 32 inch Curved Full HD VA Panel 80 cm, Wall Mountable, Slim Gaming Monitor (ZEB-AC32FHD LED)  (Response Time: 12 ms, 165 Hz Refresh Rate)",
@@ -175,6 +185,7 @@ const data = atom({
     },
     {
       id: 11,
+      rating: 3.7,
       category: "Monitor",
       LongName:
         "MarQ by Flipkart 27 inch Full HD IPS Panel Gaming Monitor (27FHDMIQII2G)  (AMD Free Sync, Response Time: 1 ms, 165 Hz Refresh Rate)",
@@ -186,6 +197,7 @@ const data = atom({
     },
     {
       id: 12,
+      rating: 3.9,
       category: "Monitor",
       LongName:
         "MSI 23.8 inch Full HD IPS Panel Wide Color Gamut, Anti-Flicker & Less Blue Light Esports Gaming Monitor (G2422)  (AMD Free Sync, Response Time: 1 ms, 170 Hz Refresh Rate)",
@@ -197,6 +209,7 @@ const data = atom({
     },
     {
       id: 13,
+      rating: 4.1,
       category: "Keyboard",
       LongName:
         "EVOFOX Warhammer Floating Keycaps, 19 Anti Ghosting Keys and LED Backlit Wired USB Gaming Keyboard (Black)",
@@ -207,6 +220,7 @@ const data = atom({
       percent: "26% off",
     },
     {
+      rating: 4.8,
       category: "Keyboard",
       id: 14,
       LongName:
@@ -218,6 +232,7 @@ const data = atom({
       percent: "67% off",
     },
     {
+      rating: 4.5,
       category: "Keyboard",
       id: 15,
       LongName:
@@ -229,6 +244,7 @@ const data = atom({
       percent: "68% off",
     },
     {
+      rating: 3.7,
       id: 16,
       category: "Processor",
       LongName:
@@ -241,6 +257,7 @@ const data = atom({
     },
     {
       id: 17,
+      rating: 4.2,
       category: "Processor",
       LongName:
         "Intel i3 10TH GEN 10105F 3.7 GHz LGA 1200 Socket 4 Cores Desktop Processor (Blue)",
@@ -252,6 +269,7 @@ const data = atom({
     },
     {
       id: 18,
+      rating: 4.9,
       category: "Processor",
       LongName:
         "amd Ryzen 9 5900X 3.7 GHz Upto 4.8 GHz AM4 Socket 12 Cores 24 Threads Desktop Processor (Silver)",
@@ -263,6 +281,7 @@ const data = atom({
     },
     {
       id: 19,
+      rating: 4.1,
       category: "Processor",
       LongName:
         "Intel i5-11400F 4.4 GHz Upto 2.6 GHz LGA 1200 Socket 6 Cores 12 Threads Desktop Processor  (Blue)",
@@ -274,6 +293,7 @@ const data = atom({
     },
     {
       id: 20,
+      rating: 4.0,
       category: "Processor",
       LongName:
         "Intel i7-12700 4.9 GHz Upto 4.9 GHz LGA1700 Socket 12 Cores 20 Threads Desktop Processor  (Blue)",
@@ -285,6 +305,7 @@ const data = atom({
     },
     {
       id: 21,
+      rating: 3.6,
       category: "GPU",
       LongName:
         "ZOTAC NVIDIA GAMING GEFORCE GTX1650 DUAL FAN 4 GB GDDR6 Graphics Card",
@@ -295,6 +316,7 @@ const data = atom({
       percent: "46% off",
     },
     {
+      rating: 4.3,
       id: 22,
       category: "GPU",
       LongName:
@@ -307,6 +329,7 @@ const data = atom({
     },
     {
       id: 23,
+      rating: 4.5,
       category: "GPU",
       LongName: "ASUS AMD Radeon DUAL RX560 4 GB GDDR5 Graphics Card",
       name: "ASUS AMD Radeon DUAL RX560",
@@ -317,6 +340,7 @@ const data = atom({
     },
     {
       id: 24,
+      rating: 2.2,
       category: "GPU",
       LongName:
         "GIGABYTE AMD Radeon GV-R66XTGAMING OC-8GD 8 GB GDDR6 Graphics Card",
@@ -336,10 +360,14 @@ const SelectPrice1= atom({
   key: "SelectPrice1",
   default: [500,1000,2000,5000,10000,30000,50000,100000,1000000]
 })
-
+const StarAbove= atom({
+  key:"StarAbove",
+  default: 0
+})
 export default itemsInCart;
 export {
   SelectPrice,
+  StarAbove,
   SelectPrice1,
   maxPrice,
   minPrice,

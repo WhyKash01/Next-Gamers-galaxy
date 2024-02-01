@@ -18,7 +18,7 @@ const CategoryItem = () => {
   }, [Category]);
   return (
     <div className="flex">
-        <div className="w-[20vw] border border-zinc-600 m-2 bg-zinc-800">
+        <div className="w-[20vw] ">
             <Filter/>
         </div>
         <div className="border w-[80vw] border-zinc-600 m-2">
