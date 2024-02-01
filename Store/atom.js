@@ -58,7 +58,7 @@ const minPrice = atom({
 });
 const maxPrice = atom({
   key: "maxprice",
-  default: 200000,
+  default: 1000000,
 });
 const data = atom({
   key: "data",

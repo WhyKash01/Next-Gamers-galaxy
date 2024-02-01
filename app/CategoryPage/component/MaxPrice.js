@@ -38,12 +38,12 @@ useEffect(() => {
           className=" text-xl"
           asChild
         >
-          <button className="text-white flex">{Maxprice===200000?"Max":Maxprice}<Image alt="" className="w-4 relative left-4 top-2" src={down}></Image></button>
+          <button className="text-white flex">{Maxprice===1000000?"Max":Maxprice}<Image alt="" className="w-4 relative left-4 top-2" src={down}></Image></button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className=" px-5 py-2">
         {selarr.map((t,i)=>{
             return <DropdownMenuItem className="py-1" onClick={()=>{setMaxprice(t)}}>
-            {t}
+            {t===1000000?"Max":t}
           </DropdownMenuItem>
           })}
           

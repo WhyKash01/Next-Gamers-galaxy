@@ -43,7 +43,7 @@ useEffect(() => {
         <DropdownMenuContent className=" px-5 py-2">
         {selArr.map((t,i)=>{
             return <DropdownMenuItem className="py-1" onClick={()=>{setMinprice(t)}}>
-            {t}
+            {t===0?"Min":t}
           </DropdownMenuItem>
           })}
           
