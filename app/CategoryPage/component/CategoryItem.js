@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import ItemsCard from "./ItemsCard";
 import Filter from "./Filter";
-
+import { ScrollArea } from "@/Components/ui/scroll-area"
 const CategoryItem = () => {
   const [product, setProduct] = useRecoilState(data);
   const [items, setItems] = useRecoilState(CatrgoryItem);
@@ -18,17 +18,18 @@ const CategoryItem = () => {
   }, [Category]);
   return (
     <div className="flex">
-        <div className="w-[20vw] ">
+        <div className="w-[20vw] h-[75vh]">
             <Filter/>
         </div>
-        <div className="border w-[80vw] border-zinc-600 m-2">
+        <ScrollArea className="border scroll-smooth w-[80vw] border-zinc-600 m-2 h-[75vh]">
+        <div className="">
       <h2 className="text-white font-semibold text-2xl ml-10 mt-5">
         Showing result of "{Category}"
       </h2>
       <h2 className="text-white text-xl ml-10 mt-1">
         {items.length} items found
       </h2>
-
+      
       <div className="grid grid-cols-2 my-5 mx-10">
         {items.map((data, index) => {
           return (
@@ -38,7 +39,9 @@ const CategoryItem = () => {
           );
         })}
       </div>
+      
       </div>
+      </ScrollArea>
     </div>
   );
 };

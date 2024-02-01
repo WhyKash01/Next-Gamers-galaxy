@@ -8,7 +8,7 @@ import CustomerRating from './CustomerRating'
 const Filter = () => {
     const [Category, setCategory] = useRecoilState(category)
   return (
-    <div className=' border border-zinc-600 m-2 bg-zinc-800'>
+    <div className=' h-[75vh] border border-zinc-600 m-2 bg-zinc-800'>
         <h2 className='text-white text-xl mt-5 mx-10 font-semibold'>Filters</h2>
         <div className='border-y border-zinc-600 mt-5'>
             <h2 className='text-white text-lg my-5 mx-10 font-semibold'>Category</h2>
