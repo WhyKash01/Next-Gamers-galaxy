@@ -35,7 +35,7 @@ const Drop = () => {
           className=" text-xl"
           asChild
         >
-          <button className="text-white flex">{Category} <Image className="w-4 relative left-4 top-2" src={down}></Image></button>
+          <button className="text-white flex">{Category===""?"Select Category":Category} <Image className="w-4 relative left-4 top-2" src={down}></Image></button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className=" px-5 py-2">
           <DropdownMenuLabel className="text-black">
