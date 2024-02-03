@@ -1,17 +1,21 @@
-'use client'
+import {SessionProvider} from "next-auth/react"
 import './globals.css'
 import Header from '@/Components/Header'
-import { RecoilRoot } from 'recoil';
+import Nav from "./(components)/Nav"
 export default function RootLayout({ children }) {
   return (
     
       
       <html lang="en">
-        <RecoilRoot>
+        
         <body className='bg-[#171717]' >
-        <Header/>
-          {children}</body>
-        </RecoilRoot>
+          <Nav/>
+        {/* <RecoilRoot> */}
+          <Header/>
+            {children}
+        {/* </RecoilRoot> */}
+        </body>
+        
       </html>
     
     

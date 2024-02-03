@@ -1,4 +1,5 @@
 "use client"
+import { RecoilRoot } from 'recoil';
 import axios from 'axios'
 import Header from "../Components/Header";
 import SliderIMG from "../Components/SliderIMG";
@@ -10,10 +11,11 @@ const page = () => {
   
   return (
     <>
-      
+      <RecoilRoot>
       <SliderIMG/>
       <Categories/>
       <Products/>
+      </RecoilRoot>
     </>
     )
 }
