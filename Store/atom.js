@@ -352,20 +352,30 @@ const data = atom({
     },
   ],
 });
-const SelectPrice= atom({
+const SelectPrice = atom({
   key: "SelectPrice",
-  default: [0,500,1000,2000,5000,10000,30000,50000,100000]
-})
-const SelectPrice1= atom({
+  default: [0, 500, 1000, 2000, 5000, 10000, 30000, 50000, 100000],
+});
+const SelectPrice1 = atom({
   key: "SelectPrice1",
-  default: [500,1000,2000,5000,10000,30000,50000,100000,1000000]
-})
-const StarAbove= atom({
-  key:"StarAbove",
-  default: 0
-})
+  default: [500, 1000, 2000, 5000, 10000, 30000, 50000, 100000, 1000000],
+});
+const StarAbove = atom({
+  key: "StarAbove",
+  default: 0,
+});
+const startIndex = atom({
+  key: "start",
+  default: 1,
+});
+const endIndex = atom({
+  key: "end",
+  default: 8,
+});
 export default itemsInCart;
 export {
+  startIndex,
+  endIndex,
   SelectPrice,
   StarAbove,
   SelectPrice1,

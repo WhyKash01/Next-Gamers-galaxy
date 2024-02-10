@@ -13,12 +13,11 @@ import Drop4 from "./Drop4";
 import profile from "../public/png/user.png";
 import "./Header.css";
 import Link from "next/link";
-import { RecoilRoot } from "recoil";
 import Hamburger from "./Hamburger";
 function Header() {
   const hide = "hidden";
   return (
-    <RecoilRoot>
+    
       <div className=" bg-black px-[5vw] sm:py-[3vh] py-3">
         <div className="navTop flex justify-between">
           <div className="flex items-center gap-4">
@@ -71,7 +70,7 @@ function Header() {
           <Drop4 title={"Keyboard"} />
         </div>
       </div>
-    </RecoilRoot>
+    
   );
 }
 

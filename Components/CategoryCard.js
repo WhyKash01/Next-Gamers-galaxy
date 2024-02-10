@@ -15,18 +15,7 @@ import { useRecoilState } from 'recoil';
 import { category } from '@/Store/atom';
 
 const CategoryCard = () => {
-  const [size, setSize]= useState({
-    width: window.innerWidth,
-    height: window.innerHeight
-  })
-  const [nub, setNum]= useState(5);
-  const [nubs, setNums]= useState(20);
-  useEffect(() => {
-    if(size.width<400){
-      setNum(3)
-      setNums(10)
-    }
-  }, [])
+  
   const [Category, setCategory]= useRecoilState(category);
   let im= 'h-[15vw]  items-center justify-center my-auto flex'
   let text= "sm:mt-10 mt-1 text-center sm:text-2xl text-xs font-semibold"
@@ -34,8 +23,8 @@ const CategoryCard = () => {
   return (
     <Swiper
     modules={[Navigation, Scrollbar, A11y]}
-    spaceBetween={nubs}
-    slidesPerView={nub}
+    spaceBetween={20}
+    slidesPerView={5}
     navigation
     scrollbar={{ draggable: true }}
       onSlideChange={() => console.log('slide change')}
