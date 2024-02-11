@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import CartItem from "./CartItem";
@@ -7,8 +7,9 @@ import shild from "../../../public/png/shield.png";
 import { useRecoilState, useRecoilValue } from "recoil";
 import itemsInCart, { itemAdded } from "@/Store/atom";
 const CartItems = () => {
-  // const x = useRecoilValue(itemAdded)
   const [itemAdd, setItemAdd] = useRecoilState(itemAdded);
+  
+  
   return (
     <div className=" ">
       <div className="flex gap-10">

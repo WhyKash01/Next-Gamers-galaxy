@@ -5,7 +5,6 @@ import Image from "next/image";
 import DisCard from "./DisCard";
 import "./ProPage.css"
 import Review from "./Review";
-import { Table } from "lucide-react";
 import { TableDemo } from "./TableDemo";
 
 const RightSection = (props) => {
@@ -15,9 +14,9 @@ const RightSection = (props) => {
   return (
     <div className="sm:w-[50vw] text-white">
       <div class="content">
-        <h2 className="sm:text-2xl text-lg line-clamp-3 font-semibold sm:mb-5 mb-2">
+        <h2 className="sm:text-2xl text-lg line-clamp-3 font-semibold sm:mb-5 mb-1">
           {props.LongName}</h2>
-        <div className="price flex sm:gap-10 gap-5 font-serif sm:text-xl text-lg">
+        <div className="price flex sm:gap-10 gap-5 font-serif sm:text-xl text-sm">
           <s className=" text-red-600">{props.OrPrice}</s>
           <h2 className=" text-green-800">{props.Price}</h2>
           <h4>{props.percent}</h4>
@@ -25,11 +24,11 @@ const RightSection = (props) => {
         <div className="sm:mt-5 mt-2">
             <Review/>
         </div>
-        <div class="flex gap-5 sm:mt-5 mt-2">
-          <Image alt="" className="bg-white rounded-sm sm:h-7 h-4 w-16 sm:w-20 my-auto " src={i2}></Image>
-          <h4 class="sm:text-lg items-center text-sm">1 Year Onsite Warranty</h4>
+        <div class="flex sm:gap-5 gap-2 sm:mt-5 mt-2">
+          <Image alt="" className="bg-white rounded-sm sm:h-7 h-4 w-12 sm:w-20 my-auto " src={i2}></Image>
+          <h4 class="sm:text-lg items-center font-semibold text-sm">1 Year Onsite Warranty</h4>
         </div>
-        <h1 className="sm:text-3xl text-xl font-semibold sm:mt-10 mt-5 sm:mb-5 mb-2">Product Description</h1>
+        <h1 className="sm:text-3xl text-xl font-semibold sm:mt-10 mt-2 sm:mb-5 mb-2">Product Description</h1>
         <DisCard {...object} />
         <DisCard {...object} />
 
